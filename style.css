@@ -1,0 +1,458 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(
+    135deg,
+    #ffb6c1,   /* Light Pink */
+    #dda0dd,   /* Plum */
+    #87ceeb,   /* Sky Blue */
+    #98fb98,   /* Pale Green */
+    #ffd700    /* Gold */
+  );
+  background-size: 400% 400%;
+  animation: gradientAnimation 20s ease infinite;
+  overflow-x: hidden;
+  position: relative;
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  25% { background-position: 50% 100%; }
+  50% { background-position: 100% 50%; }
+  75% { background-position: 50% 0%; }
+  100% { background-position: 0% 50%; }
+}
+
+.entry-screen {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+  animation: subtleScale 8s infinite alternate ease-in-out;
+}
+
+@keyframes subtleScale {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.03); }
+}
+
+.glass-card {
+  margin-top: 30px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  text-align: center;
+  padding: 40px;
+  max-width: 400px;
+  width: 80%;
+  color: rgb(126, 20, 139);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card.entry-card {
+  
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(12px);
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 10px 30px rgba(31, 38, 135, 0.4);
+    text-align: center;
+    padding: 30px;
+    max-width: 450px;
+    width: 90%;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+}
+
+/* NEW: Styling for "Welcome!" with gradient colors */
+#welcome-title {
+    font-family: 'Pacifico', cursive;
+    font-size: 3.5em;
+    margin-top: 0;
+    margin-bottom: 15px;
+    background: linear-gradient(45deg, #ff69b4, #dda0dd, #ffd700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #ff69b4;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+/* NEW: Styling for the remaining text with a dark color */
+.entry-card p.entry-message {
+    font-size: 1.2em;
+    color: #333333;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.glass-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(31, 38, 135, 0.35);
+}
+
+.her-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid white;
+  object-fit: cover;
+  margin-bottom: 20px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+  transition: box-shadow 0.3s ease;
+}
+
+.her-photo:hover {
+  box-shadow: 0 0 25px rgba(255, 255, 255, 1);
+}
+
+.hero-title-container.main-page-title {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-title-container h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 4.5em;
+    margin: 0;
+    line-height: 1;
+    color: #ffefd5;
+    background: linear-gradient(45deg, #ff69b4, #dda0dd, #ffd700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+}
+
+.hero-title-container .birthday-name {
+    font-family: 'Pacifico', cursive;
+    font-size: 3.5em;
+    display: block;
+    margin-top: 10px;
+    color: #ffe4e1;
+    background: linear-gradient(45deg, #ff69b4, #ff85c1, #ffd700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+}
+
+.blinking-name {
+    animation: blink 1s infinite alternate;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    100% { opacity: 0.4; }
+}
+
+.fancy-wish-box {
+    margin: 30px auto;
+    padding: 30px;
+    max-width: 500px;
+    width: 90%;
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(12px);
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 10px 30px rgba(31, 38, 135, 0.4);
+    display: flex;
+    align-items: center;
+    min-height: 100px; /* Ensure minimum height */
+}
+
+.fancy-typing-text {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.8em;
+    background: linear-gradient(45deg, #aa6acc, #dd0bc1, #d4a000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #6a0dad;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    text-align: center;
+    width: 100%;
+    /* MODIFIED: Allow text to wrap by default */
+    white-space: normal;
+    word-wrap: break-word;
+    overflow: hidden;
+    /* The border-right for caret is dynamically managed by JavaScript */
+    border-right: 2px solid #6a0dad; /* Fallback/initial caret */
+    animation: fancyBlinkCaret 0.75s step-end infinite;
+}
+
+@keyframes fancyBlinkCaret {
+  from, to { border-color: transparent }
+  50% { border-color: #6a0dad; }
+}
+
+
+.typing-text {
+  font-size: 22px;
+  color: #d63384;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid black;
+  animation: blinkCaret 0.75s step-end infinite;
+  padding: 0 10px;
+  box-sizing: border-box;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+/* Media query for smaller screens - MODIFIED */
+@media (max-width: 768px) {
+  .typing-text {
+    font-size: 18px;
+    white-space: normal; /* Ensure it wraps on mobile */
+    word-wrap: break-word;
+    min-height: 40px;
+    text-align: center;
+  }
+
+  /* Adjust font size for fancy typing text on mobile */
+  .fancy-typing-text {
+    font-size: 1.2em; /* Smaller font size for mobile */
+  }
+
+  .hero-title-container h1 {
+    font-size: 3em;
+  }
+
+  .hero-title-container .birthday-name {
+    font-size: 2.5em;
+  }
+
+  /* Adjust entry screen title for mobile */
+  #welcome-title {
+      font-size: 2.5em; /* Smaller welcome title for mobile */
+  }
+
+  .entry-card p.entry-message {
+      font-size: 1em; /* Smaller paragraph text for mobile */
+  }
+}
+
+@keyframes blinkCaret {
+  from, to { border-color: transparent }
+  50% { border-color: black; }
+}
+
+#open-btn, button[type="submit"], #download-card, #music-toggle-btn {
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+#open-btn:hover, button:hover, #download-card:hover, #music-toggle-btn:hover {
+  background-color: #ff85c1;
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+.main {
+  text-align: center;
+  padding: 20px;
+  padding-top: 0px;
+}
+
+textarea {
+  width: 80%;
+  max-width: 500px;
+  padding: 12px;
+  margin: 15px 0;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+  resize: vertical;
+}
+
+.hidden {
+  display: none;
+}
+
+#particles-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+#decorative-particles-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: -2;
+}
+
+.decorative-particle {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    opacity: 0;
+    animation: floatParticle 10s infinite ease-in-out forwards;
+}
+
+.decorative-particle.star {
+    background: none;
+    font-size: 18px;
+    color: gold;
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.8);
+}
+
+
+@keyframes floatParticle {
+    0% { transform: translateY(100vh) translateX(0px) rotate(0deg); opacity: 0; }
+    20% { opacity: 0.8; }
+    50% { transform: translateY(50vh) translateX(var(--float-x-offset)) rotate(180deg); }
+    80% { opacity: 0.8; }
+    100% { transform: translateY(-50px) translateX(0px) rotate(360deg); opacity: 0; }
+}
+
+.cake-container {
+  margin-top: 30px;
+}
+
+.cake-container img {
+  width: 150px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.cake-container img:active {
+    transform: scale(0.95);
+}
+
+.countdown {
+  font-size: 20px;
+  margin: 10px 0;
+  color: #333;
+}
+
+.balloons {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.balloon {
+  width: 40px;
+  height: 55px;
+  border-radius: 50%;
+  position: absolute;
+  animation: float 10s infinite ease-in-out;
+  opacity: 0.8;
+  box-shadow: inset -5px -5px 10px rgba(0,0,0,0.2);
+}
+
+.balloon::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 30px;
+    background: rgba(0,0,0,0.3);
+    border-radius: 0 0 50% 50%;
+}
+
+.red { background: #ff4d4d; left: 10%; animation-delay: 0s; }
+.blue { background: #4d4dff; left: 30%; animation-delay: 2s; }
+.green { background: #4dff4d; left: 50%; animation-delay: 4s; }
+.yellow { background: #ffff4d; left: 70%; animation-delay: 6s; }
+
+@keyframes float {
+  0% { top: 100vh; transform: translateX(0); }
+  25% { transform: translateX(10px); }
+  50% { top: -50px; transform: translateX(-10px); }
+  75% { transform: translateX(5px); }
+  100% { top: -100px; transform: translateX(0); }
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-150px) translateX(calc(var(--random-x) * 1px)); opacity: 0; }
+}
+
+#confetti-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.music-controls {
+    margin-top: 20px;
+}
+
+#music-toggle-btn {
+    padding: 10px 15px;
+    font-size: 20px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.message-wall {
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 30px;
+    max-width: 600px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: left;
+    color: #333;
+}
+
+.message-wall h3 {
+    text-align: center;
+    color: #d63384;
+    margin-bottom: 15px;
+}
+
+.message-wall p {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+}
+@media (max-width: 768px) {
+  /* ... existing mobile styles ... */
+
+  /* NEW: Adjust padding for fancy wish box on smaller screens */
+  .fancy-wish-box {
+      padding: 20px; /* Reduce padding for mobile */
+  }
+}

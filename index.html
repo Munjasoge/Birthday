@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday XYZ</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    emailjs.init("dYDueZGgT7glb7-WU"); // Replace with your EmailJS Public Key
+  </script>
+</head>
+<body>
+  <canvas id="particles-bg"></canvas>
+  <div id="decorative-particles-container"></div>
+
+  <div id="entry-screen" class="entry-screen">
+    <div class="glass-card entry-card">
+      <h1 id="welcome-title">Welcome!</h1>
+      <p class="entry-message">Hope you have a fantastic day filled with joy and laughter!</p>
+      <button id="open-btn">Open</button>
+    </div>
+  </div>
+
+  <div id="main-content" class="main hidden">
+    <div class="hero-title-container main-page-title">
+      <h1>Happy Birthday!</h1>
+      <span class="birthday-name blinking-name">XYZ</span>
+    </div>
+
+    <div class="glass-card fancy-wish-box">
+      <p id="fancy-typing-text" class="fancy-typing-text"></p>
+    </div>
+
+    <h2 id="typing-text" class="typing-text"></h2>
+
+    <form id="message-form">
+      <textarea id="message" placeholder="Write a personal message..."></textarea>
+      <button type="submit">Submit</button>
+    </form>
+    <div id="display-message"></div>
+    <div id="message-wall" class="message-wall">
+        <h3>Messages you sent:</h3>
+        </div>
+
+    <audio id="bg-music" loop>
+      <source src="Happy Birthday To #happybirthdaysong You  #birthdaycakelyrics #happybirthday #birthdaysong #cake.mp3" type="audio/mpeg">
+    </audio>
+    <!-- <div class="music-controls">
+        <button id="music-toggle-btn"><i class="fas fa-pause"></i></button>
+    </div> -->
+
+    <div class="glass-card">
+      <div class="cake-container">
+        <img src="Cacke.jpeg" id="cake" alt="Birthday Cake" />
+        <p>Click the cake to blow out candles 🎂</p>
+      </div>
+    </div>
+
+    <!-- <button id="download-card">Download Your Birthday Card</button> -->
+
+    <div class="balloons">
+      <div class="balloon red"></div>
+      <div class="balloon blue"></div>
+      <div class="balloon green"></div>
+      <div class="balloon yellow"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
